@@ -7,6 +7,7 @@ let g:nvimager#autostart = get(g:, 'nvimager#autostart', 0)
 let g:nvimager#title = get(g:, 'nvimager#title', 0)
 let g:nvimager#dynamic_scaler = get(g:, 'nvimager#dynamic_scaler', 'fit_contain')
 let g:nvimager#static_scaler = get(g:, 'nvimager#static_scaler', 'forced_cover')
+let g:plugindir = expand('<sfile>:p:h:h') " TODO: should be s: instead of g: ?
 
 " temporarily set coptions to default to call fucntion
 let s:save_cpo = &cpo

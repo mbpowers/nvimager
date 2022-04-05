@@ -18,6 +18,6 @@ for i;do
       st(1\,t)*0*st(2\,ld(2)+1)\,if(ld(1)*lte(ld(2)\,$numOfScenes)\,between(t\,ld(1)+$sceneDelay\, \
       ld(1)+$sceneDelay+$sceneLength))),scale=320:180:force_original_aspect_ratio=decrease:force_divisible_by=2:flags=bicubic+full_chroma_inp:sws_dither=none, \
       framestep=2,setpts=N/($framerate*TB),split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse" \
-      -an -sn -map_chapters -1 -map_metadata -1 -hide_banner -compression_level 5 -q:v 75 -loop 0 -f gif -y /home/craggle/.cache/nvimager/${i##*/}.gif
+      -an -sn -map_chapters -1 -map_metadata -1 -hide_banner -compression_level 5 -q:v 75 -loop 0 -f gif -y $XDG_CACHE_HOME/nvimager/${i##*/}.gif
 
 done

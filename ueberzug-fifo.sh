@@ -88,8 +88,7 @@ function draw_preview {
     # GIF Thumbnail for Video
     elif [[ "$1" == "videopreview" ]]; then
         file="${2##*/}"
-        [ ! -f "${TMP_FOLDER}/${file}.gif" ] && \
-            ./thumbnailer.sh "$2"
+        [ ! -f "${TMP_FOLDER}/${file}.gif" ] && ../thumbnailer.sh "$2"
             # https://www.reddit.com/r/ffmpeg/comments/gx9j4h/how_can_i_detect_scene_changes_and_grab_2_seconds/?utm_source=reddit&utm_medium=usertext&utm_name=ffmpeg&utm_content=t1_gqkofmx
             # ffmpeg -i "$2" -vsync vfr -vf \
             # "select=if(gt(scene\,0.5)*(isnan(prev_selected_t)+gte(t-prev_selected_t\,2))\,st(1\,t)*0*st(2\,ld(2)+1)\,if(ld(1)*lt(ld(2)\,4)\,between(t\,ld(1)+2\,ld(1)+4))), \
