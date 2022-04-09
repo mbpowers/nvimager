@@ -83,10 +83,10 @@ local function clearImage(image)
 end
 
 local function above(a, b) return a[5]>b[5] end
-local function clearImages(images)
+local function clearImages(imagesToClear)
     -- Sort reverse row order
-    table.sort(images, above)
-    for _, image in pairs(images) do
+    table.sort(imagesToClear, above)
+    for _, image in pairs(imagesToClear) do
         clearImage(image)
     end
 end
