@@ -45,7 +45,7 @@ local wincol = 0
 --------------------------------------------------------------------------------
 local function updateWinInfo()
 -- TODO: return table of values instead of using "'global'" variables?
-    for i, info in pairs(table.unpack(vim.fn.getwininfo(winId))) do
+    for i, info in pairs(unpack(vim.fn.getwininfo(winId))) do
         if i == "width" then termWidth = info
         elseif i == "topline" then topline = info
         elseif i == "botline" then botline = info
@@ -197,11 +197,11 @@ local function init()
 
     -- For each match in buflines create extmark & add image to table
     local bufLines = vim.fn.getbufline(vim.fn.bufname(), "0", "$")
-    local name, scaler, path, width, height, extId = table.unpack({"", "", "", 0, 0, 0})
+    local name, scaler, path, width, height, extId = unpack({"", "", "", 0, 0, 0})
     for row = 1,#bufLines,1 do
         local line = bufLines[row]
 
-        local match, first = table.unpack(vim.fn.matchstrpos(line, capturePattern))
+        local match, first = unpack(vim.fn.matchstrpos(line, capturePattern))
         height = 0
         if first ~= -1 then
             -- Match Pattern & Extract Image Data
