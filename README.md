@@ -86,6 +86,8 @@ Nvimager matches text in the buffer to the following patterns:
 
 </details>
 
+![example](https://user-images.githubusercontent.com/45055485/162593883-2962d821-6566-476c-9ceb-d62ac4c4217b.gif)
+
 ## Configuration
 
 <details>
