@@ -1,5 +1,5 @@
 " https://dev.to/2nit/how-to-write-neovim-plugins-in-lua-5cca
-if exists('g:loaded_plugin_name') | finish | endif " prevent loading file twice
+if exists('g:loaded_nvimager') | finish | endif " prevent loading file twice
 
 " set options to user derfined/default values
 let g:loaded_nvimager = 1
