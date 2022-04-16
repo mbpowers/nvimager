@@ -172,7 +172,7 @@ local function init()
 
     -- Instantiate Other Variables
     updateWinInfo()
-    local capturePattern = [[\v\[.+\]\(.+\)(\<\!---?.+---?\>)?|\$.+\$]]
+    local capturePattern = [[\v\[.+\]\(file\:.+\)(\<\!---?.+---?\>)?|\$.+\$]]
     local dynamicPattern = "%[(.+)%]%(file:(.+)%)"
     local staticPattern = "%[(.+)%]%(file:(.+)%)<%!--[%-]?(.+)--[%-]?>"
     local texPattern = "%$(.+)%$"
