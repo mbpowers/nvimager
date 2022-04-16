@@ -1,5 +1,3 @@
-local vim = vim -- This makes my LSP stop yelling at me
-
 -- Variables
 --------------------------------------------------------------------------------
 -- \usepackage{xcolor}
