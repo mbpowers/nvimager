@@ -17,7 +17,7 @@ command! NvimagerRefresh lua require'nvimager'.refresh()
 let &cpo = s:save_cpo
 unlet s:save_cpo
 
-nnoremap <Plug>NvimageToggle :<C-u>NvimagerToggle<CR>
-nnoremap <Plug>NvimageRefresh :<C-u>NvimagerToggle<CR>
+nnoremap <Plug>NvimagerToggle :<C-u>NvimagerToggle<CR>
+nnoremap <Plug>NvimagerRefresh :<C-u>NvimagerRefresh<CR>
 " nnoremap <space>qq :<C-u>NvimagerToggle<CR>
 " nnoremap <space>qr :<C-u>NvimagerRefresh<CR>
