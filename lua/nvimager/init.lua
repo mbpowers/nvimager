@@ -99,7 +99,6 @@ local function insertText(imagesToInsert)
             for _ = 1,image[7]-1,1 do vim.api.nvim_put({string.rep("█", image[6]+image[4]-textoff)},"l", true, false) end
         end
         -- Insert Title
-        -- TODO: TeX breaks title insertion
         if title==1 then
             if image[10] == 0 then vim.fn.cursor(image[5]+heightOffset+image[7]+image[10], image[4]-textoff) end
             vim.api.nvim_put({string.rep(" ", image[4]-textoff+(image[6]-string.len(image[1]))*image[10]/2)..image[1]}, "l", true, false)
