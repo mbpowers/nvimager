@@ -20,21 +20,20 @@ Designed for use with vimwiki using markdown syntax.
 
 ## Install
 
-Download using your preffered package manager, but you probably most of them.
 <details>
   <summary>Dependencies</summary>
 
-- [Üeberzug](https://github.com/seebye/ueberzug)
-- [pdftoppm](https://linux.die.net/man/1/pdftoppm)
-- [ffmpeg](https://ffmpeg.org/)
-- [imagemagick](https://imagemagick.org/index.php)
-- [pdfTex](https://tug.org/applications/pdftex/)
+- [Üeberzug](https://github.com/seebye/ueberzug) (Necessary)
+- [pdftoppm](https://linux.die.net/man/1/pdftoppm) (PDF/LaTeX)
+- [ffmpeg](https://ffmpeg.org/) (Video)
+- [imagemagick](https://imagemagick.org/index.php) (GIF/Video)
+- [pdfTex](https://tug.org/applications/pdftex/) (LaTeX)
 
 </details>
 
-You can use your preffered plugin manager, otherwise here are instructions for Vim-Plug.
 <details>
   <summary>nvimager</summary>
+  Download using your preffered plugin manager, otherwise here are instructions for Vim-Plug.
 
 1. Install [junegunn/vim-plug](https://github.com/junegunn/vim-plug).
 
@@ -72,9 +71,11 @@ Nvimager matches text in the buffer to the following patterns:
 `[name](file:path)<!--widthxheight-->` or ***TODO*** ~`$ equation $<!--widthxheight-->`~
 
 - Width and height are measured in terminal cells.
-- The html comment `<!--comment-->` is allowed either two or three hyphens.
+- The html comment `<!--comment-->` is allowed either two or three hyphens per side.
 - On creation a static image will insert filler text, consisting of full block characters, "█", in exactly the cells of the preview.
 - ***Do not delete filler text!*** Filler text will be deleted upon BufWrite, deletion of the link pattern, or when nvimager is toggled off.
+- Filler text is removed `PreBufWrite` and replaced `PostBufWrite`, so you don't have to toggle to avoid writing filler lines to your file.
+- ***Do not have multiple static previews on one line!***
 - Must toggle nvimager to update size.
 
 </details>
@@ -131,7 +132,7 @@ let g:nvimager#static_scaler = 'forced_cover'
 
 ## Contributing
 
-PRs and issues welcomed.
+PRs, issues and feature suggestion welcomed.
 
 If editing the README, please conform to the [standard-readme](https://github.com/RichardLitt/standard-readme) specification.
 
