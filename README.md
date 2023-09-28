@@ -23,7 +23,7 @@ Designed for use with vimwiki using markdown syntax.
 <details>
   <summary>Dependencies</summary>
 
-- [Üeberzug](https://github.com/seebye/ueberzug) (Necessary)
+- [Üeberzug](https://github.com/ueber-devel/ueberzug) (Necessary)
 - [pdftoppm](https://linux.die.net/man/1/pdftoppm) (PDF/LaTeX)
 - [ffmpeg](https://ffmpeg.org/) (Video)
 - [imagemagick](https://imagemagick.org/index.php) (GIF/Video)
